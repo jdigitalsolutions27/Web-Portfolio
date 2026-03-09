@@ -1,0 +1,17 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ajcStroke" x1="34" y1="28" x2="214" y2="228" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.52" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="ajcFill" x1="58" y1="42" x2="194" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081120"/>
+      <stop offset="1" stop-color="#040913"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="22" width="212" height="212" rx="56" fill="url(#ajcFill)" stroke="url(#ajcStroke)" stroke-width="8"/>
+  <path d="M82 180L128 74L174 180" stroke="url(#ajcStroke)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M98 142H158" stroke="url(#ajcStroke)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M180 84V156C180 176.987 162.987 194 142 194H126" stroke="url(#ajcStroke)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,20 @@
+﻿<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="920" fill="url(#bg)"/>
+  <rect x="50" y="50" width="1300" height="820" rx="28" fill="rgba(6,10,19,0.62)" stroke="rgba(255,255,255,0.18)"/>
+  <circle cx="210" cy="180" r="170" fill="rgba(34,211,238,0.22)"/>
+  <circle cx="1150" cy="730" r="220" fill="rgba(59,130,246,0.2)"/>
+  <rect x="120" y="170" width="660" height="22" rx="11" fill="rgba(255,255,255,0.86)"/>
+  <rect x="120" y="212" width="500" height="14" rx="7" fill="rgba(226,232,240,0.7)"/>
+  <rect x="120" y="260" width="200" height="130" rx="16" fill="rgba(34,211,238,0.22)"/>
+  <rect x="340" y="260" width="200" height="130" rx="16" fill="rgba(59,130,246,0.24)"/>
+  <rect x="560" y="260" width="200" height="130" rx="16" fill="rgba(16,185,129,0.2)"/>
+  <rect x="120" y="430" width="1140" height="320" rx="20" fill="rgba(8,12,24,0.78)" stroke="rgba(255,255,255,0.13)"/>
+  <text x="120" y="120" fill="#ecfeff" font-size="54" font-family="Segoe UI, Arial, sans-serif" font-weight="700">PearlSmile Dental Clinic</text>
+  <text x="120" y="812" fill="#93c5fd" font-size="26" font-family="Segoe UI, Arial, sans-serif">Live Website Project Showcase</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+</svg>

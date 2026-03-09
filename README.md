@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alden Jay A. Centino - Ultra Premium Portfolio
 
-## Getting Started
+Immersive full-stack developer portfolio built with Next.js App Router, TypeScript, Tailwind, shadcn/ui, and Framer Motion.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- Framer Motion animations
+- next/image optimized thumbnails
+- MDX case studies support
+
+## Routes
+
+- `/` Home experience
+- `/projects` Project Explorer (grid, explorer rows, compact mode)
+- `/projects/[slug]` Micro case study page
+- `/showcase` Cinematic showcase mode
+- `/contact`, `/about`, `/case-studies`
+- `/api/screenshot` Optional screenshot helper endpoint
+
+## Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Data Model
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Main data file:
 
-## Learn More
+- `lib/projects.ts`
 
-To learn more about Next.js, take a look at the following resources:
+Project type:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```ts
+{
+  slug: string;
+  title: string;
+  url: string;
+  category: Category;
+  tags: string[];
+  featured: boolean;
+  year: number;
+  description: string;
+  goal: string;
+  solution: string;
+  highlights: string[];
+  thumbnails: {
+    desktop: string;
+    tablet?: string;
+    mobile?: string;
+  };
+  industryNotes: string;
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Category definitions:
 
-## Deploy on Vercel
+- `lib/categories.ts`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Thumbnails
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All project previews are local files under:
+
+- `public/thumbnails/`
+
+Per-project device files:
+
+- `{slug}-desktop.jpg`
+- `{slug}-tablet.jpg`
+- `{slug}-mobile.jpg`
+
+Fallback asset:
+
+- `public/thumbnails/fallback-showcase.svg`
+
+## Add a New Project
+
+1. Add a new entry in `lib/projects.ts`.
+2. Add `desktop/tablet/mobile` thumbnail files to `public/thumbnails`.
+3. Mark `featured: true` if it should appear in launch reel/showcase rotation.
+4. Run checks:
+
+```bash
+npm run lint
+npm run build
+```
+
+## Showcase + Explorer Features
+
+- Project Explorer with search, sort, category filters, sticky controls
+- Browse modes: `Grid`, `Explorer`, `Compact` (persisted in URL query)
+- Device morph previews on card hover (desktop/tablet/mobile cycle)
+- Launch Reel autoplay montage (pause + manual selection)
+- Cinematic Showcase Mode with keyboard + swipe + auto-tour
+- Command palette (`Ctrl/Cmd + K`) for fast navigation
+
+## Contact Form Provider Switch
+
+By default, contact submissions log to server console.
+
+Configure `.env.local` to enable email sending:
+
+```bash
+CONTACT_PROVIDER=console
+CONTACT_TO_EMAIL=ajcentz28@gmail.com
+CONTACT_FROM_EMAIL=portfolio@example.com
+
+RESEND_API_KEY=
+
+SMTP_HOST=
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+```
+
